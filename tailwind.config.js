@@ -10,7 +10,8 @@ export default {
         primary:"rgba(221, 119, 53, 1)",
         bgPrimary:"rgba(221, 119, 53, 1)",
         headdingText:"rgb(57, 57, 57)",
-      }
+        primarText:"#151a30"
+      },
     },
   },
   plugins: [],
