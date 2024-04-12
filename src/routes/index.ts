@@ -22,6 +22,21 @@ export const routes = [
     component: lazy(() => import('../pages/learn'))
   }, 
   {
+    path: '/terms-and-conditions',
+    title:"LearnPage",
+    component: lazy(() => import('../pages/termsAndConditions'))
+  }, 
+  {
+    path: '/privacy-and-policy',
+    title:"LearnPage",
+    component: lazy(() => import('../pages/privacy'))
+  }, 
+  {
+    path: '/refund-policy',
+    title:"LearnPage",
+    component: lazy(() => import('../pages/refund'))
+  }, 
+  {
     path: '*',
     title:"HomePage",
     component: lazy(() => import('../pages/home'))

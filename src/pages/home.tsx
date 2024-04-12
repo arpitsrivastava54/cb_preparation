@@ -6,7 +6,22 @@ import NavBar from "../components/NavBar"
 
 const bannerImg = "https://cloud-1de12d.b-cdn.net/media/original/019ee49f34fd4fe00a7c9701dd366e33/219_WEBSITE%20(7).png"
 const footerItems = [
-  "Terms of use", "Privacy Policy","Refund Policy","Contact Us"
+  {
+    path: "/terms-and-conditions",
+    name:"Terms of use"
+  },
+  {
+    path: "/privacy-and-policy",
+    name:"Privacy Policy"
+  },
+  {
+    path: "/refund-policy",
+    name:"Refund Policy"
+  },
+  {
+    path: "",
+    name:"Contact us"
+  },
 ]
 const HomePage = () => {
   return (
@@ -49,7 +64,7 @@ const HomePage = () => {
       <footer className="w-full h-[80px] bg-white flex justify-evenly lg:justify-center gap-0 lg:gap-20 items-center">
             {
               footerItems.map((item) => (
-                <Link to={""} className="text-xs lg:text-lg font-semibold">{item}</Link>
+                <Link to={item.path} className="text-xs lg:text-lg font-semibold">{item.name}</Link>
               ))
             }
       </footer>
