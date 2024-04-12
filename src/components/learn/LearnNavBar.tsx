@@ -41,13 +41,13 @@ const LearnNavBar = () => {
           <div className="flex gap-4 justify-center items-center">
             <Link
               className="px-3 py-2 text-sm text-center text-blue-600 bg-blue-50 border border-blue-600 rounded hover:bg-blue-100 focus:outline-none focus:ring"
-              to="/login"
+              to="/signin"
             >
               SIGN IN
             </Link>
             <Link
               className="px-3 py-2 text-sm text-center text-white bg-blue-600 border border-blue-600 rounded hover:bg-blue-500 hover:opacity-90 hover:text-white focus:outline-none focus:ring"
-              to="/download"
+              to="/signup"
             >
               SIGN UP
             </Link>
