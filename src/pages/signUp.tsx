@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo1 from '../assets/logo1.jpeg';
-import google from '../assets/google.jpeg';
+import { Link } from 'react-router-dom';
+import googeImg from "../assets/google.svg"
 
-const LoginPage = () => {
+const SignUpPage = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [showSignUp, setShowSignUp] = useState(false); // State to toggle between sign-in and sign-up forms
-
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const toggleSignUpForm = () => {
-    setShowSignUp(!showSignUp);
-  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <img src={logo1} alt="Logo" className="w-20 h-20 mb-4" />
-      <h1 className="text-2xl font-semibold mb-4">{showSignUp ? "Sign Up for an account" : "Sign in to your account"}</h1>
+      <h1 className="text-2xl font-semibold mb-4">Sign Up for an account</h1>
       <form className="w-full max-w-sm">
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
@@ -43,26 +39,19 @@ const LoginPage = () => {
             </button>
           </div>
         </div>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4">{showSignUp ? "Sign Up" : "Sign In"}</button>
-        {!showSignUp && (
-          <p className="text-sm text-gray-600 mb-2"><a href="#" className="text-blue-500">Forgot your password?</a></p>
-        )}
+        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4">Sign Up</button>
         <div className="mb-2 text-center">
-          <p className="text-sm text-gray-600">{showSignUp ? "Already have an account? " : "Don't have an account? "} <a href="#" className="text-blue-500" onClick={toggleSignUpForm}>{showSignUp ? "Sign In" : "Sign Up"}</a></p>
-          {showSignUp && (
-            <div className="text-sm text-gray-600">
-              By clicking {showSignUp ? "Sign Up" : "Sign In"}, you agree to our <a href="#" className="text-blue-500">terms of service & privacy policy</a>.
-            </div>
-          )}
-          {showSignUp && (
-            <div className="mt-2">
-              <span className="text-gray-600 font-semibold">or</span>
-            </div>
-          )}
+          <p className="text-sm text-gray-600">Already have an account? <Link to={"/signin"} className="text-blue-500" >Sign In</Link></p>
+          <div className="text-xs my-10 text-gray-600">
+            By clicking Sign Up you agree to our <a href="#" className="text-blue-500">terms of service & privacy policy</a>.
+          </div>
+          <div className="mt-2">
+            <span className="text-gray-600 font-semibold">or</span>
+          </div>
         </div>
         <div className="mt-4">
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center w-full mb-4">
-            <img src={google} alt="Google" className="w-6 h-6 mr-2" />
+            <img src={googeImg} alt="Google" className="w-6 h-6 mr-2 bg-white" />
             Continue with Google
           </button>
         </div>
@@ -71,4 +60,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage;
+export default SignUpPage;

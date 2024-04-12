@@ -7,9 +7,14 @@ export const routes = [
     component: lazy(() => import('../pages/home'))
   },
   {
-    path: '/login',
-    title:"LoginPage",
-    component: lazy(() => import('../pages/login'))
+    path: '/signin',
+    title:"SignInPage",
+    component: lazy(() => import('../pages/signIn'))
+  }, 
+  {
+    path: '/signup',
+    title:"SignUpPage",
+    component: lazy(() => import('../pages/signUp'))
   }, 
   {
     path: '/learn',
@@ -20,10 +25,5 @@ export const routes = [
     path: '*',
     title:"HomePage",
     component: lazy(() => import('../pages/home'))
-  },
-  {
-    path: '/sidebar',
-    title:"SideBar",
-    component: lazy(() => import('../pages/sidebar'))
   },
 ]
