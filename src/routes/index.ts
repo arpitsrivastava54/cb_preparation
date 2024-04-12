@@ -21,4 +21,9 @@ export const routes = [
     title:"HomePage",
     component: lazy(() => import('../pages/home'))
   },
+  {
+    path: '/sidebar',
+    title:"SideBar",
+    component: lazy(() => import('../pages/sidebar'))
+  },
 ]
