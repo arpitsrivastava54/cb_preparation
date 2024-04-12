@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import cbLogo from "../../assets/cb-80437250.jpg"
-import facebookLogo from "../../assets/facebook.svg"
+import facebookLogo from "../../assets/facebook.jpeg"
 import youtubeLogo from "../../assets/youtube.svg"
 import linkedinLogo from "../../assets/linkedin.svg"
 

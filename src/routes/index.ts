@@ -7,6 +7,11 @@ export const routes = [
     component: lazy(() => import('../pages/home'))
   },
   {
+    path: '/layout',
+    title:"MainLayoutPage",
+    component: lazy(() => import('../pages/mainLayoutPage'))
+  },
+  {
     path: '/signin',
     title:"SignInPage",
     component: lazy(() => import('../pages/signIn'))
