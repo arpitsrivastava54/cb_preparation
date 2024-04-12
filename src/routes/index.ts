@@ -26,4 +26,19 @@ export const routes = [
     title:"SideBar",
     component: lazy(() => import('../pages/sidebar'))
   },
+  {
+    path: '/tnc',
+    title:"Terms",
+    component: lazy(() => import('../pages/tnc'))
+  },
+  {
+    path: '/footer',
+    title:"Footer",
+    component: lazy(() => import('../pages/footer'))
+  },
+  {
+    path: '/frontpage',
+    title:"Frontpage",
+    component: lazy(() => import('../pages/frontpage'))
+  },
 ]
